@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ardd. Starter Template: a-Frame</title>
+        <!--script to import a-frame to project-->
+        <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+        <!--script to import environment component to set up quick environment that is customizable-->
+        <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+        <!--script addes animation control from a-frame extras-->
+        <script src="https://unpkg.com/lodash@4.17.20"></script>
+    </head>
+    <body>
+        <script src="/src/index.js"></script>
+      <a-scene>
+        <a-assets>
+            <img id="skyBox" src="assets/anime_art_style_afro-futuristic_dreamy_sky_seen_fr.jpg" alt="">
+            <a-asset-item id="blueEyes" src="assets/animated_blue-_eyes_white_dragon_yugioh.glb"></a-asset-item>
+        </a-assets>
+     <a-box src="assets/sky_afro-futuristic_dreamy_sky_seen_from_the_groun.jpg" position="-1 0.5 -3" rotation="0 45 0" color="#FBE3BF" scale="2 2 2">
+
+      </a-box>
+     <!--  <a-sphere src="assets/stylized-ice-texture.png" position="0 1.25 -5" radius="1.25" color="#368BC1">
+
+      </a-sphere>
+      <a-cylinder src="assets/pixel-noise.png" position="1 0.75 -3" radius="0.5" height="1.5" color="#ffffff">
+
+      </a-cylinder>
+      <a-plane position="0 -2 -4" rotation="-90 0 0" width="50" height="50" color="#7BC8A4">
+        
+      </a-plane>
+   <a-sky src="#skyBox">
+            <a-animation attribute="rotation" dur="30000" to="0 360 0" repeat="indefinite"></a-animation>
+        </a-sky>
+-->
+      <a-entity gltf-model="#blueEyes" scale="1 1 1" position="0 0 -3" timeScale="1" duration="1">
+
+      </a-entity>
+      <a-entity environment="preset: contact; groundTexture: walkernoise; dressing:pyramids; dressingUniformScale: false; ground:hills; skyType: gradient; skyColor: #f3f3f3; dressingScale: 1; dressingVariance:  2 3 1; lightPosition: 1 10 6;">
+
+      </a-entity>
+        
+       
+      </a-scene>
+    </body>
+    </html>
